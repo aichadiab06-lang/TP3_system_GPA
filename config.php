@@ -1,4 +1,4 @@
-> Aicha diab:
+
 <?php
 // إعدادات قاعدة البيانات بناءً على الصور
 $servername = "localhost";
