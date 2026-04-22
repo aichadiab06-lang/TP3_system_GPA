@@ -1,4 +1,4 @@
-> Aicha diab:
+
 <?php
 include 'config.php';
 
