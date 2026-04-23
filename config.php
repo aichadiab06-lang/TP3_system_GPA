@@ -1,14 +1,20 @@
 
 <?php
-// إعدادات قاعدة البيانات بناءً على الصور
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "university_db"; // هذا الاسم اللي ظهر في الجداول عندك
+// إعدادات قاعدة البيانات
+$host = "localhost";
+$user = "root";
+$pass = "";
+$db_name = "university_db"; 
 
-$conn = mysqli_connect($servername, $username, $password, $dbname);
+// إنشاء الاتصال
+$conn = mysqli_connect($host, $user, $pass, $db_name);
 
+// التحقق من الاتصال وإظهار الخطأ بوضوح إذا وجد
 if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
+    die("خطأ في الاتصال بقاعدة البيانات: " . mysqli_connect_error());
 }
-?>
+
+// ضبط الترميز لدعم اللغة العربية بشكل صحيح
+mysqli_set_charset($conn, "utf8mb4");
+
+// ملاحظة: لا نغلق وسم الـ PHP إذا كان الملف يحتوي على كود PHP فقط لتجنب الشاشة البيضاء
