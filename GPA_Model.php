@@ -1,4 +1,4 @@
-> Aicha diab:
+
 <?php
 class GPA_Model {
     /**
